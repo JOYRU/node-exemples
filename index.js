@@ -1,11 +1,22 @@
-var rect = require('./rectangle.js') ; 
-function solveRect(l,z){
-      if(l<=0 || z<=0)
-        console.log("can not be zero") ; 
-     else{
-        console.log("perimeter: " + rect.perimeter(l,z)) ; 
-         console.log("area: " + rect.area(l,z)) ; 
-     }
+var rect = require('./rectangle') ; 
+function solveRect(l,b){
+     
+     console.log("Solving for Rectangle") ; 
+
+         rect(l,b,(err , joy) =>{
+             if(err){
+                 console.log("ERRor : " , err.message) ; 
+
+             }
+
+             else{
+                 console.log("area : " + joy.area(l,b)) ; 
+                 console.log("perimeter: "+ joy.perimeter(l,b)) ; 
+             }
+
+     }) ;
+
+     console.log("This statement after call rect") ; 
 
 }
 
