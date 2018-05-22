@@ -1,15 +1,9 @@
-var rect ={
-    perimeter: (x,y) =>(x) , 
-    area:(x,y) =>(y)
-
-
-}
-
+var rect = require('./rectangle.js') ; 
 function solveRect(l,z){
       if(l<=0 || z<=0)
         console.log("can not be zero") ; 
      else{
-         console.log("perimeter : " + rect.perimeter(l,z)) ; 
+        console.log("perimeter: " + rect.perimeter(l,z)) ; 
          console.log("area: " + rect.area(l,z)) ; 
      }
 
